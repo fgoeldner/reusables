@@ -6,7 +6,7 @@
 
 syntax = "proto3";
 
-package fgoeldner.reusables;
+package fragoe.reusables;
 
 option go_package = "fragoe/reusables";
 option csharp_namespace = "Fragoe.Reusables";
