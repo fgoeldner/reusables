@@ -1,0 +1,66 @@
+// Copyright (c) 2020, Frank Göldner
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+syntax = "proto3";
+
+package fgoeldner.reusables;
+
+option go_package = "fragoe/reusables";
+option csharp_namespace = "Fragoe.Reusables";
+option java_multiple_files = true;
+option java_outer_classname = "ReusablesProto";
+option java_package = "com.fragoe.reusables";
+option objc_class_prefix = "FRX";
+option php_namespace = "Fragoe\\Reusables";
+
+// A full physical location of something.
+message Address {
+  // Language in which the address is given.
+  //
+  // The names for country, province and city are different in different languages,
+  // so you can have the same address in English and German.
+  //
+  // Example:
+  //  - de: Deutschland / Bayern / München
+  //  - en: Germany / Bavaria / Munich
+  //  - fr: Allemagne / Bavière / Munich
+  //
+  // Language Codes
+  // --------------
+  // Language codes are defined by [ISO 639](https://en.wikipedia.org/wiki/ISO_639),
+  // an international standard that assigns two- and three-letter codes to most
+  // languages of the world.
+  //
+  // Examples:
+  //   - "de"
+  //   - "en"
+  //   - "fr"
+  string language = 1;
+
+  // The country that this property is located in. The value must be an ISO 3116 uppercase
+  // 2-letter country code. For example, United States is "US" and Canada is "CA".
+  //
+  // reference: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+  string country = 2;
+
+  // The name of the property's state, region, or province.
+  string province = 3;
+
+  // The name of the property's city.
+  string city = 4;
+
+  // The property's postal code.
+  string postal_code = 5;
+
+  // The primary street address of the property.
+  string address1 = 6;
+
+  // The secondary street address of the property, if necessary.
+  string address2 = 7;
+
+  // The secondary street address of the property, if necessary.
+  string address3 = 8;
+}
