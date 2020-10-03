@@ -1,0 +1,57 @@
+// Copyright (c) 2020, Frank Göldner
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+syntax = "proto3";
+
+package fragoe.reusables;
+
+option go_package = "fragoe/reusables";
+option csharp_namespace = "Fragoe.Reusables";
+option java_multiple_files = true;
+option java_outer_classname = "ReusablesProto";
+option java_package = "com.fragoe.reusables";
+option objc_class_prefix = "FRX";
+option php_namespace = "Fragoe\\Reusables";
+
+// Internationalised text.
+message I18nText {
+  // Locale, consisting of language and region.
+  //
+  // Format:
+  //     <language code>[_<country code>]
+  //
+  // Language Codes
+  // --------------
+  // Language codes are defined by [ISO 639](https://en.wikipedia.org/wiki/ISO_639),
+  // an international standard that assigns two- and three-letter codes to most
+  // languages of the world. Locale uses the two-letter codes to identify the target
+  // language.
+  //
+  // Country (Region) Codes
+  // ----------------------
+  // Language doesn't paint the entire picture of a locale. For example, even though
+  // you may use de as the locale language code, de alone doesn't tell you anything
+  // about where German is spoken. Several countries use German as an official first
+  // or even second language in different varieties and dialects. For this reason
+  // and others, language is not always sufficient to precisely define a locale.
+  //
+  // Country codes are defined by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166),
+  // another international standard. It defines two- and three-letter abbreviations
+  // for each country or major region in the world. In contrast to the language codes,
+  // country codes are set uppercase. Locale uses the two-letter codes instead of the
+  // three-letter codes that this standard also defines.
+  //
+  // Examples:
+  //   - de
+  //   - de_DE
+  //   - de_CH
+  //
+  // @inject_tag: pg:",pk,type:varchar(5)"
+  string locale = 2;
+
+  // The text in the specified language.
+  string text = 3;
+}
