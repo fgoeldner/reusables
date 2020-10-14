@@ -8,8 +8,6 @@ syntax = "proto3";
 
 package fragoe.reusables;
 
-import "i18n_text.proto";
-
 option go_package = "fragoe/reusables";
 option csharp_namespace = "Fragoe.Reusables";
 option java_multiple_files = true;
