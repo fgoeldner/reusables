@@ -8,7 +8,7 @@ syntax = "proto3";
 
 package fragoe.reusables;
 
-option go_package = "fragoe/reusables";
+option go_package = "fragoe/reusables;reusables";
 option csharp_namespace = "Fragoe.Reusables";
 option java_multiple_files = true;
 option java_outer_classname = "ReusablesProto";
