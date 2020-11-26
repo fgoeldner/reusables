@@ -17,7 +17,7 @@ option objc_class_prefix = "FGRUS";
 option php_namespace = "Fragoe\\Reusables\\V1";
 option ruby_package = "Fragoe::Reusables::V1";
 
-// A region specific contact information object.
+// A country specific contact information object.
 message Contact {
   // Known contact types.
   enum ContactType {
@@ -36,7 +36,7 @@ message Contact {
   // The contact value, email address, or any kind of identifier.
   string value = 2;
 
-  // Code of the region for which this contact information relevant.
+  // Code of the country for which this contact information relevant.
   //
   // Country codes are defined by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166).
   // It defines two- and three-letter abbreviations for each country or major region
@@ -45,5 +45,5 @@ message Contact {
   // Examples:
   //   - "DE"
   //   - "UK"
-  string region = 3;
+  string country = 3;
 }
