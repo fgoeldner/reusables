@@ -1,0 +1,32 @@
+// Copyright (c) 2020, Frank Göldner
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+syntax = "proto3";
+
+package fragoe.reusables.v1;
+
+import "fragoe/reusables/v1/i18n_text.proto";
+
+option go_package = "fragoe/fragoe/reusables/v1;reusables";
+option csharp_namespace = "Fragoe.Reusables.V1";
+option java_package = "com.fragoe.fragoe.reusables.v1";
+option java_multiple_files = true;
+option java_outer_classname = "PictureLinkProto";
+option objc_class_prefix = "FGRUS";
+option php_namespace = "Fragoe\\Reusables\\V1";
+option ruby_package = "Fragoe::Reusables::V1";
+
+// Object to store a picture URL and an appropriate caption.
+message PictureLink {
+  // Specifies the location of the picture.
+  //
+  // The location should be public (not behind a firewall) and should include the
+  // protocol (https://).
+  string url = 1;
+
+  // Defines the caption for the picture.
+  repeated fragoe.reusables.v1.I18nText caption = 2;
+}

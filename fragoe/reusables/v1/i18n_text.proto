@@ -6,15 +6,16 @@
 
 syntax = "proto3";
 
-package fragoe.reusables;
+package fragoe.reusables.v1;
 
-option go_package = "fragoe/reusables;reusables";
-option csharp_namespace = "Fragoe.Reusables";
+option go_package = "fragoe/fragoe/reusables/v1;reusables";
+option csharp_namespace = "Fragoe.Reusables.V1";
+option java_package = "com.fragoe.fragoe.reusables.v1";
 option java_multiple_files = true;
-option java_outer_classname = "ReusablesProto";
-option java_package = "com.fragoe.reusables";
-option objc_class_prefix = "FRX";
-option php_namespace = "Fragoe\\Reusables";
+option java_outer_classname = "I18nTextProto";
+option objc_class_prefix = "FGRUS";
+option php_namespace = "Fragoe\\Reusables\\V1";
+option ruby_package = "Fragoe::Reusables::V1";
 
 // Internationalised text.
 message I18nText {
@@ -48,10 +49,8 @@ message I18nText {
   //   - de
   //   - de_DE
   //   - de_CH
-  //
-  // @inject_tag: pg:",pk,type:varchar(5)"
-  string locale = 2;
+  string locale = 1;
 
   // The text in the specified language.
-  string text = 3;
+  string text = 2;
 }

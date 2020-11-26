@@ -1,0 +1,49 @@
+// Copyright (c) 2020, Frank Göldner
+// All rights reserved.
+//
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+syntax = "proto3";
+
+package fragoe.reusables.v1;
+
+option go_package = "fragoe/fragoe/reusables/v1;reusables";
+option csharp_namespace = "Fragoe.Reusables.V1";
+option java_package = "com.fragoe.fragoe.reusables.v1";
+option java_multiple_files = true;
+option java_outer_classname = "ContactProto";
+option objc_class_prefix = "FGRUS";
+option php_namespace = "Fragoe\\Reusables\\V1";
+option ruby_package = "Fragoe::Reusables::V1";
+
+// A region specific contact information object.
+message Contact {
+  // Known contact types.
+  enum ContactType {
+    CONTACT_TYPE_UNSPECIFIED  = 0;
+    CONTACT_TYPE_UNKNOWN      = 1;
+    CONTACT_TYPE_EMAIL        = 2;
+    CONTACT_TYPE_WEBSITE      = 3;
+    CONTACT_TYPE_PHONE_MAIN   = 4;
+    CONTACT_TYPE_PHONE_MOBILE = 5;
+    CONTACT_TYPE_PHONE_FAX    = 6;
+  };
+
+  // The type of contact (e.g. phone, email).
+  ContactType type = 1;
+
+  // The contact value, email address, or any kind of identifier.
+  string value = 2;
+
+  // Code of the region for which this contact information relevant.
+  //
+  // Country codes are defined by [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166).
+  // It defines two- and three-letter abbreviations for each country or major region
+  // in the world. Country codes are set uppercase.
+  //
+  // Examples:
+  //   - "DE"
+  //   - "UK"
+  string region = 3;
+}
