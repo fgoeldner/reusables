@@ -10,9 +10,9 @@ package fragoe.reusables.v1;
 
 import "fragoe/reusables/v1/i18n_text.proto";
 
-option go_package = "fragoe/fragoe/reusables/v1;reusables";
+option go_package = "fragoe/reusables/v1;reusables";
 option csharp_namespace = "Fragoe.Reusables.V1";
-option java_package = "com.fragoe.fragoe.reusables.v1";
+option java_package = "com.fragoe.reusables.v1";
 option java_multiple_files = true;
 option java_outer_classname = "PictureLinkProto";
 option objc_class_prefix = "FGRUS";

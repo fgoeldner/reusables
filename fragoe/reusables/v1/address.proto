@@ -8,9 +8,9 @@ syntax = "proto3";
 
 package fragoe.reusables.v1;
 
-option go_package = "fragoe/fragoe/reusables/v1;reusables";
+option go_package = "fragoe/reusables/v1;reusables";
 option csharp_namespace = "Fragoe.Reusables.V1";
-option java_package = "com.fragoe.fragoe.reusables.v1";
+option java_package = "com.fragoe.reusables.v1";
 option java_multiple_files = true;
 option java_outer_classname = "AddressProto";
 option objc_class_prefix = "FGRUS";
